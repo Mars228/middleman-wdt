@@ -1,0 +1,44 @@
+@import "../variables.scss";
+
+// Footer
+footer {
+    padding: 25px 0;
+    span.copyright {
+        line-height: 40px;
+        font-family: $font-title;
+        font-weight: 400;
+        text-transform: none;
+    }
+    ul.quicklinks {
+        margin-bottom: 0;
+        line-height: 40px;
+        font-family: $font-title;
+        text-transform: none;
+        text-align: right;
+    }
+}
+
+// Social Buttons
+ul.social-buttons {
+    margin-bottom: 0;
+    text-align: center;
+    li {
+        a {
+            display: block;
+            background-color: $negative_bg;
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            font-size: 20px;
+            line-height: 40px;
+            color: $color-contrast;
+            outline: none;
+            @include transition (all 0.3s);
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $color_bg;
+            }
+        }
+    }
+}

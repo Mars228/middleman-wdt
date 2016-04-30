@@ -1,0 +1,37 @@
+// Highlight Color Customization
+
+//::-moz-selection {
+//    text-shadow: none;
+//    background: $accent-color;
+//}
+
+::selection, ::-moz-selection {
+    text-shadow: none;
+    background: $accent-color;
+}
+
+img::selection, img::-moz-selection {
+    background: transparent;
+}
+
+body {
+    margin: 0px;
+    font-family: $font-txt;
+    font-size: 16px;
+    line-height: 23px;
+    color: $color-body;
+    font-weight: 400;
+    background-color: #FFF;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    webkit-tap-highlight-color: $accent-color;
+}
+
+a, a:hover, a:focus, a:active, a:visited {
+	outline: 0 none;
+	text-decoration: none;
+	cursor: pointer;
+	border: 0;
+	_noFocusLine: expression(this.hideFocus=true); /* Fix for IE7 */
+}

@@ -1,0 +1,35 @@
+lang: 'pl'
+title: 'MM template'
+
+description: "Welcome page description"
+keywords: "welcome page, keyword 1, keyword 2, keyword 3"
+
+author:
+  name: 'Your Name'
+  email: 'your.name@domain.lan'
+
+copyright:
+  year: '&copy; 2011-2016'
+  owner: 'Website Owner'
+
+oldie: '<p class="browsehappy">Przeglądarka której używasz <strong>jest przestarzała</strong>. Tracisz możliwość skorzystania z pełni możliwości oferowanych przez niektóre strony internetowe. <a href="http://browsehappy.com/">Zaktualizuj przeglądarkę już teraz</a>.</p>'
+#oldie: 'your browser is to old, go for mushrooms' 
+
+social_media:
+-
+  media: 'twitter'
+  link: 'https://twitter.com/'
+-
+  media: 'facebook'
+  link: 'https://www.facebook.com/'
+-
+  media: 'linkedin'
+  link: 'https://linkedin.com/'
+-
+  media: 'google-plus'
+  link: 'https://plus.google.com/'
+
+# Google Map:
+# google_map: API_ID
+# Google Analytics: change UA-XXXXX-X to be your site's ID.
+google_analytics_id: UA-XXXXXX-X

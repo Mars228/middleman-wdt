@@ -1,0 +1,7 @@
+menu:
+-
+  menuItem: 'Installation'
+  menuLink: '#installation'
+-
+  menuItem: 'Customize'
+  menuLink: '#customize'

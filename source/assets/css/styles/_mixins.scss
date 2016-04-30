@@ -1,0 +1,84 @@
+@import "variables.scss";
+
+$between-default: 0;
+$gradientStart: top;
+$gradientEnd: bottom;
+@mixin gradient($from, $to, $between: $between-default, $start: $gradientStart, $end: $gradientEnd) {
+  background: $from;
+  @if $between !=0{
+    background: -webkit-linear-gradient($start, $from, $between, $to);
+    background: -moz-linear-gradient($start, $from, $between, $to);
+    background: -o-linear-gradient($start, $from, $between, $to);
+    background: -ms-linear-gradient($start, $from, $between, $to);
+    background: linear-gradient(to $end, $from, $between, $to);
+  } @else {
+    background: -webkit-linear-gradient($start, $from, $to);
+    background: -moz-linear-gradient($start, $from, $to);
+    background: -o-linear-gradient($start, $from, $to);
+    background: -ms-linear-gradient($start, $from, $to);
+    background: linear-gradient(to $end, $from, $to);
+  }
+}
+
+@mixin button($name, $backgroundColor, $borderColor) {
+  .button-#{$name} {
+    background-color: $backgroundColor;
+    border-color: $borderColor;
+    &:hover {
+      background-color: $borderColor;
+    }
+  }
+}
+
+// Short retina mixin for setting background-image and -size
+
+@mixin img-retina($file-1x, $file-2x, $width-1x, $height-1x) {
+  background-image: url("#{$file-1x}");
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+    background-image: url("#{$file-2x}");
+    background-size: $width-1x $height-1x;
+  }
+}
+
+
+$default-fz: 13;
+$default-lh: 1.2;
+@mixin font($size: $default-fz, $line: $size * $default-lh) {
+  font-size: ($size/$default-fz) + em;
+  line-height: ($line/$size);
+}
+
+@mixin font-size($size: 1.6,$line: $size*1.5) {
+    font-size:   ($size) + px;
+    font-size:   $size/16 + rem;
+    line-height: $line/16 + rem;
+    line-height: ($line) + px;
+}
+
+
+
+
+@mixin fontcolor($class-name, $font-color) {
+  .#{$class-name} {
+    color: $font-color;
+  }
+}
+
+$f-icons: 'FontAwesome';
+
+@mixin icon {
+  font-family: $f-icons;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+

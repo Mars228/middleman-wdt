@@ -1,0 +1,100 @@
+
+//@brand-primary: #fed136;
+//@brand-danger: #e74c3c;
+//@gray-darkest: #222;
+//@gray: #777;
+//@gray-lighter: #f7f7f7;
+//@placeholder-text: #bbbbbb;
+
+
+$font-txt: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-txt-weight: 400;
+$font-txt-size: 14px;
+$font-txt-line: 21px;
+
+$font-title: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-title-weight: 700;
+
+$accent-color:  #fed136; //#E53A0A  #FF5300  rgba(255, 83, 0, 1)
+$color_bg: #ecc561;
+
+$accent-alt: #e74c3c;
+
+$negative_bg: #272822;
+
+
+
+$color-contrast: #FFFFFF;
+
+$gray-g1: lighten(#000000, 96%); //F5F5F5
+$gray-g2: lighten(#000000, 93.5%); //EEEEEE
+$gray-g3: lighten(#000000, 92%); //EBEBEB
+$gray-g4: lighten(#000000, 89%); //E3E3E3
+$gray-g5: lighten(#000000, 83%); //D4D4D4
+$gray-g6: lighten(#000000, 68%); //ADADAD
+$gray-g7: lighten(#000000, 46.7%); //777777
+$gray-g8: lighten(#000000, 33.5%); //555555
+$gray-g9: lighten(#000000, 20%); //333333
+$gray-g10: lighten(#000000, 13.5%); //222222
+
+
+// orange
+//$accent_color: #FF5300;
+
+$c-av-g2: tint($accent_color, 25);
+$c-av-g3: tint($accent_color, 40);
+$c-av-g4: tint($accent_color, 55);
+$c-av-g5: tint($accent_color, 70);
+$c-av-g6: tint($accent_color, 85);
+
+$c-av-g7: $accent_color; // <- * 
+
+$c-av-g8: shade($accent_color, 10);
+$c-av-g9: shade($accent_color, 20);
+$c-av-g10: shade($accent_color, 30);
+$c-av-g11: shade($accent_color, 40);
+$c-av-g12: shade($accent_color, 50);
+
+
+//$color-body: $gray-g9;
+
+$color-body: #4c515f;
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default
