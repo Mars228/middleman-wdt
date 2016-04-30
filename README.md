@@ -1,2 +1,49 @@
 # middleman-wdt
-Custom Middleman v.4 starter kit for rapid webdesign
+
+Custom Middleman v.4 starter kit for rapid webdesign. Similar to [middleman-prototype](https://github.com/skatkov/middleman-prototype)
+
+## Components
+
+- Compass
+- Bootsrtap (scss)
+- Fontawesome
+- JQuery
+- Middleman - tests and builds static version of websites
+
+## Installation
+
+Create a new project with the template:
+
+```bash
+$ middleman init -T mars228/middleman-webdesign-template MY_NEW_PROJECT
+```
+
+## Usage
+
+Start a local web server running at `http://localhost:4567/` with:
+
+```bash
+$ middleman server
+```
+
+Create a static file with:
+
+```bash
+$ middleman build
+```
+
+For help, see the official [Middleman](http://middlemanapp.com) website.
+
+### Customization
+
+Folder structure
+
+source
+├─ assets
+|  ├─ css
+|  ├─ fonts
+|  ├─ img
+|  └─ js
+├─ images
+├─ layouts
+└─ partials
