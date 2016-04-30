@@ -38,6 +38,7 @@ For help, see the official [Middleman](http://middlemanapp.com) website.
 
 Folder structure
 
+```bash
 source
 ├─ assets
 |  ├─ css
@@ -47,3 +48,4 @@ source
 ├─ images
 ├─ layouts
 └─ partials
+```
