@@ -15,7 +15,7 @@ Custom Middleman v.4 starter kit for rapid webdesign. Similar to [middleman-prot
 Create a new project with the template:
 
 ```bash
-$ middleman init -T mars228/middleman-webdesign-template MY_NEW_PROJECT
+$ middleman init -T mars228/middleman-wdt MY_NEW_PROJECT
 ```
 
 ## Usage
