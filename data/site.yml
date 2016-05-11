@@ -10,7 +10,7 @@ copyright:
   owner: 'Website Owner'
 
 oldie: '<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>'
-#pl: oldie: '<p class="browsehappy">Przeglądarka której używasz <strong>jest przestarzała</strong>. Tracisz możliwość skorzystania z pełni możliwości oferowanych przez niektóre strony internetowe. <a href="http://browsehappy.com/">Zaktualizuj przeglądarkę już teraz</a>.</p>'
+#oldie: '<p class="browsehappy">Przeglądarka której używasz <strong>jest przestarzała</strong>. Tracisz możliwość skorzystania z pełni możliwości oferowanych przez niektóre strony internetowe. <a href="http://browsehappy.com/">Zaktualizuj przeglądarkę już teraz</a>.</p>'
 
 social_media:
 -
