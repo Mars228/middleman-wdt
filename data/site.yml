@@ -1,9 +1,6 @@
 lang: 'pl'
 title: 'MM template'
 
-description: "Welcome page description"
-keywords: "welcome page, keyword 1, keyword 2, keyword 3"
-
 author:
   name: 'Your Name'
   email: 'your.name@domain.lan'
