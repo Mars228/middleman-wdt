@@ -2,12 +2,12 @@
 
 //::-moz-selection {
 //    text-shadow: none;
-//    background: $accent-color;
+//    background: $link-color;
 //}
 
 ::selection, ::-moz-selection {
     text-shadow: none;
-    background: $accent-color;
+    background: $link-color;
 }
 
 img::selection, img::-moz-selection {
@@ -17,15 +17,15 @@ img::selection, img::-moz-selection {
 body {
     margin: 0px;
     font-family: $font-txt;
-    font-size: 16px;
-    line-height: 23px;
-    color: $color-body;
-    font-weight: 400;
+    font-size: $font-txt-size;
+    line-height: $font-txt-line;
+    color: $body-color;
+    font-weight: $font-txt-weight;
     background-color: #FFF;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    webkit-tap-highlight-color: $accent-color;
+    webkit-tap-highlight-color: $link-color;
 }
 
 a, a:hover, a:focus, a:active, a:visited {
@@ -33,5 +33,9 @@ a, a:hover, a:focus, a:active, a:visited {
 	text-decoration: none;
 	cursor: pointer;
 	border: 0;
-	_noFocusLine: expression(this.hideFocus=true); /* Fix for IE7 */
+	//_noFocusLine: expression(this.hideFocus=true); /* Fix for IE7 */
+}
+
+.section {
+    padding: 10em 0;
 }

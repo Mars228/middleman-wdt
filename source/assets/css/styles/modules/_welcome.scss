@@ -1,0 +1,44 @@
+/* ======= Welcome ======= */
+.welcome {
+	background-color: $body-bg;
+	//padding-bottom: 4em;
+
+	.logo img {
+		height: 18.75em;
+		margin: 3em 0;
+	}
+
+	h2 {
+		color: $color-contrast;
+		font-size: 3em;
+		font-family: $font-title;
+		font-weight: 700;
+	}
+	p {
+		color: rgba(0, 0, 0, 0.45);
+		font-size: 1.8em;
+		font-family: $font-title;
+		line-height: 2.2em;
+		font-weight: 400;
+		padding: 1em 0 2em 0;
+	}
+
+.btns {
+	padding: 0;
+	margin: 0;
+}
+
+.btn-outline-inverse {
+    background-color: transparent;
+    border-color: $color-contrast;
+    color: $color-contrast;
+
+    &:active, &:focus, &:hover {
+    background-color: $color-contrast;
+    border-color: $color-contrast;
+    color: shade($body-bg, 20%);
+    text-shadow: none;
+}
+}
+
+}

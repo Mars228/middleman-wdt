@@ -1,30 +1,13 @@
-// Animation
-//@import "modules/animate.scss";
-
-// Core CSS
-//@import "modules/fonts.scss";
+// Base
+@import "modules/base.scss";
 
 //Global Layout
+@import "modules/layout.scss";
+
+// Core CSS
 //@import "modules/navbar.scss";
 @import "modules/header.scss";
 @import "modules/footer.scss";
-//@import "modules/sidebar.scss";
-
-//Navigation
-//@import "modules/menu.scss";
-//@import "modules/superfish.scss";
-
-//Gallery and Photos Module
-//@import "modules/portfolio.scss";
-
-//Custom Libs
-//@import "modules/tooltip.scss";
-
-//Blog
-//@import "modules/blog-short-post.scss";
-//@import "modules/blog-preview.scss";
-//@import "modules/blog-listing.scss";
-//@import "modules/blog-item.scss";
 
 // Other Components
-//@import "modules/about.scss";
+@import "modules/welcome.scss";

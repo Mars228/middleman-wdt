@@ -1,6 +1,6 @@
 
 /* Extra small devices (phones, less than 768px) */
-@media (max-width: 767px) { 
+@media (max-width: $screen-sm-max) { 
 
     .header { 
     	.main-nav { 
@@ -15,7 +15,7 @@
     }
     
     .welcome {
-    	background-color: $color_bg;
+    	background-color: $body-bg;
 
     	.title {
         	font-size: 66px;
@@ -31,22 +31,23 @@
     }
 
 
+
 }
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
+@media (min-width: $screen-md-max) { 
       
 }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+@media (min-width: $screen-lg-max) {
 
 
 
 }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+@media (min-width: $screen-xl-max) {
 
 
 }

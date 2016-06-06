@@ -1,12 +1,17 @@
-// This is where it all goes :)
+// site: middleman-wdt.lh
+var $ = jQuery.noConflict();
 
-jQuery(document).ready(function($) {
+// Page Loader
+$(window).load(function(){
+    $('#loader').fadeOut();
+});
 
-    /* ======= Scrollspy ======= */
-    $('body').scrollspy({ target: '#header', offset: 400});
-    
-    /* ======= Fixed header when scrolled ======= */
-    
+$(document).ready(function($) {
+    "use strict";
+
+    /* ---------------------------------------------------------------------- */
+    /*  Fixed header when scrolled
+    /* ---------------------------------------------------------------------- */
     $(window).bind('scroll', function() {
          if ($(window).scrollTop() > 50) {
              $('#header').addClass('navbar-fixed-top');
@@ -15,9 +20,25 @@ jQuery(document).ready(function($) {
              $('#header').removeClass('navbar-fixed-top');
          }
     });
-   
+
+    /* ---------------------------------------------------------------------- */
+    /*  Scroll to top
+    /* ---------------------------------------------------------------------- */
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 500) {
+            $('.scrollup').fadeIn(400);
+        } else {
+            $('.scrollup').fadeOut(400);
+        }
+    });
+    $('.scrollup').click(function(event){
+        event.preventDefault();
+        $('html, body').animate({scrollTop : 0},400);
+        return false;
+    });
+
+
     /* ======= ScrollTo ======= */
-    //$('a.scrollto').on('click', function(e){
     $('.scrollto').on('click', function(e){
         
         //store hash
@@ -25,12 +46,13 @@ jQuery(document).ready(function($) {
                 
         e.preventDefault();
         
-		$('body').scrollTo(target, 800, {offset: -70, 'axis':'y', easing:'easeOutQuad'});
+        $('body').scrollTo(target, 800, {offset: -70, 'axis':'y', easing:'easeOutQuad'});
         //Collapse mobile menu after clicking
-		if ($('.navbar-collapse').hasClass('in')){
-			$('.navbar-collapse').removeClass('in').addClass('collapse');
-		}
-		
-	});
+        if ($('.navbar-collapse').hasClass('in')){
+            $('.navbar-collapse').removeClass('in').addClass('collapse');
+        }
+        
+    });
+
 
 });
