@@ -1,95 +1,306 @@
-/* ======= Header ======= */
+/* --------------------------------------------------
+/ Header: > 992 px
+/ ------------------------------------------------ */
+
 .header {
-	padding: 10px 0;
-	background: $body-bg;
 	color: #fff;
+	background: $body-bg;
+	padding: 20px 0;
+	text-align: right;
 	position: fixed;
-	width: 100%;
 	@include transition (all 0.4s ease-in-out);
+	width: 100%;
 	
-	&.navbar-fixed-top {
-		background: $negative_bg;
-		@include transition (all 0.4s ease-in-out);
-		z-index: 9999;
-		@include box-shadow (rgba(0, 0, 0, 0.6) 0 0 4px);
-		.logo {
-			a {
-				color: $body-bg;
-			}
-		}
-		.main-nav .nav .nav-item a {
-			//color: $gray-g7;
-			color: #fff;
-		}
-	}
-	
-	.logo {
-		margin: 0;
-		font-size: 26px;
-		padding-top: 10px;
-		font-family: $font-title;
-		font-weight: 700;
+	.navbar-header {
+
 		a {
 			color:#fff;
+
+			&.navbar-brand {
+				float: left;
+				height: auto;
+				padding: 15px 0;
+				@include fontsize(25px, 25px);
+				margin-left: 0;
+	
+				.logo-title {
+					font-family: $font-title;
+					font-weight: 700;
+				}
+			}
+
 			&:hover {
 				text-decoration: none;
 			}
 		}
 	}
-	.main-nav {      
-		button {
-			background: shade($body-bg, 30%);
-			color: #fff !important;
-			@include border-radius(4px);
-			&:focus {
-				outline: none;
-			}
-			.icon-bar {
-				background-color: #fff;
+
+	&.sticky {
+		background: $negative_bg;
+		@include box-shadow(rgba(0, 0, 0, 0.6) 0 0 4px);
+		@include transition(all 0.4s ease-in-out);
+		z-index: 10;
+
+		.logo-title {
+			color: $body-bg;
+			&:hover, &:focus {
+				color: $color-contrast;
 			}
 		}
-		.navbar-collapse {
-			padding: 0;
-		}
-		.nav {
-			.nav-item {
-				font-weight: normal;
-				margin-right: 30px;
-				font-family: $font-title;
-				&.active {
-					a {
-						color: $body-bg;
-						background: none;
-					}
-				}
+	}
+
+
+.navbar-collapse {
+
+	.nav {
+		li {
+			&.active {
+				background-color: shade($body-bg, 10%);
 				a {
-					color: shade($body-bg, 20%);
-					@include transition (none);
-					font-size: 14px;
-					padding: 15px 10px;
-					&:hover {  
-						color: shade($body-bg, 30%);    
-						background: none;             
-					}
-					&:focus {
-						outline: none;
-						background: none;
-					}
-					&:active {
-						outline: none;
-						background: none;
-					}
-				}    
-				&.active {
-					color: $body-bg;             
-				}
-				&.last {
-					margin-right: 0;
+					color: $color-contrast;
+					
 				}
 			}
-			
+			a {
+				padding: 16px;
+				line-height: 23px;
+				color: shade($body-bg, 30%);
+
+				&:hover, &:focus, &:visited {
+					color: #FFFFFF;
+					background-color: shade($body-bg, 20%);
+				}
+			}
+		}
+	}
+}
+
+}
+
+
+
+	.search-box-cont {
+		margin: 0;
+		position: relative;
+	}
+
+	.search-box-trigger {
+		padding: 15px;
+		line-height: 25px;
+		text-align: center;
+		width: 43px;
+		cursor: pointer;
+		display: block;
+		color: #fff;
+
+		&:hover, &:focus {
+			color: #FFFFFF;
+			background-color: shade($body-bg, 20%);
+		}
+	}
+
+	.search-box {
+		min-width: 300px;
+		position: absolute;
+		bottom: -78px;
+		right: 0;
+		padding: 10px;
+		//display: block;
+		opacity: 0;
+visibility: hidden;
+
+
+		-webkit-transition: opacity .3s ease-in-out;
+		-moz-transition: opacity .3s ease-in-out;
+		-ms-transition: opacity .3s ease-in-out;
+		-o-transition: opacity .3s ease-in-out;
+		transition: opacity .3s ease-in-out;
+		background: #ffffff none repeat scroll 0 0;
+		border-color: #ff6347 -moz-use-text-color -moz-use-text-color;
+		border-image: none;
+		border-radius: 0;
+		border-style: solid none none;
+		border-width: 3px medium medium;
+		box-shadow: 0.9px 0.866px 5px 0 rgba(0, 0, 0, 0.3);
+z-index: 20;
+
+		&::before {
+			border-color: transparent transparent #ff6347;
+			border-style: solid;
+			border-width: 0 6px 6px;
+			box-sizing: border-box;
+			content: "";
+			display: block;
+			height: 0;
+			position: absolute;
+			right: 15px;
+			top: -9px;
+			width: 0;
 		}
 		
-	}
+		&.active {
+			display: block;
+			opacity: 1;
+visibility: visible;
+
+			-webkit-transition: opacity .3s ease-in-out;
+			-moz-transition: opacity .3s ease-in-out;
+			-ms-transition: opacity .3s ease-in-out;
+			-o-transition: opacity .3s ease-in-out;
+			transition: opacity .3s ease-in-out;
+		}
 	
+		input {
+			background-color: transparent;
+			border-color: $gray-g4;
+			border-radius: 0;
+			border-right-width: 0;
+			box-shadow: none;
+			color: $gray-g6;
+			display: inline-block;
+			height: auto;
+			float: left;
+			margin-bottom: 0;
+			width: 85%;
+			padding: 8px 12px;
+
+			&:-moz-placeholder, &:-ms-input-placeholder, &::-webkit-input-placeholder, &::-moz-placeholder {
+				color: red;
+				opacity: 0.5;
+			}
+
+			&:focus {
+				border-color: $gray-g6;
+				box-shadow: none;
+			}
+		}
+		
+		button {
+			padding: 8px 20px;
+			width: 15%;
+			float: left;
+			border-radius: 0;
+			text-indent: -3px;
+			color: $gray-g8;
+			background-color: $gray-g4;
+			&::-moz-focus-inner { 
+				border: 0;
+			}
+			&:hover, &:focus, &:visited {
+				color: $color-contrast;
+				background-color: $gray-g7;
+				outline: none;
+			}
+		}
+
+
+	
+	}
+
+
+
+
+/* --------------------------------------------------
+/ Header: 481 - 992 px
+/ ------------------------------------------------ */
+@media only screen and (max-width: $screen-md-max) {
+
+
+}
+
+
+/* --------------------------------------------------
+/ Header: 0 - 480 px
+/ ------------------------------------------------ */
+@media only screen and (max-width: $screen-xs-max) {
+
+
+	.header {
+		padding: 10px 0;
+
+
+
+.navbar-collapse  {
+	border: none;
+	box-shadow: none;
+	.nav {
+		z-index: 30;
+		li {
+			display: block;
+			&.active {
+				background-color: shade($body-bg, 10%);
+				a {
+					color: $color-contrast;
+					
+				}
+			}
+			a {
+				padding: 10px;
+				line-height: 20px;
+				color: shade($body-bg, 20%);
+
+				&:hover, &:focus, &:visited {
+					color: #FFFFFF;
+					background-color: shade($body-bg, 20%);
+				}
+			}
+		}
+	}
+}
+
+
+.navbar-header {
+
+		a {
+
+			&.navbar-brand {
+
+				padding: 10px 0;
+				@include fontsize(20px, 20px);
+				margin-left: 0;
+	
+			}
+		}
+	}
+
+
+	.search-box-trigger {
+		padding: 10px;
+		line-height: 20px;
+		text-align: center;
+		width: 43px;
+		cursor: pointer;
+		display: block;
+		color: #fff;
+
+		&:hover, &:focus {
+			color: #FFFFFF;
+			background-color: shade($body-bg, 20%);
+		}
+	}
+
+
+		.navbar-toggle {
+			margin: 0;
+			border-radius: 0;
+					padding: 10px;
+		line-height: 18px;
+		text-align: center;
+		width: 46px;
+		cursor: pointer;
+		display: block;
+		color: #fff;
+
+		&:hover, &:focus {
+			color: #FFFFFF;
+			background-color: shade($body-bg, 20%);
+		}
+
+
+
+
+		}
+	}
+
+
 }

@@ -1,13 +1,10 @@
-// Base
-@import "modules/base.scss";
-
-//Global Layout
-@import "modules/layout.scss";
-
 // Core CSS
-//@import "modules/navbar.scss";
+@import "modules/base.scss";
 @import "modules/header.scss";
+@import "modules/buttons.scss";
 @import "modules/footer.scss";
+@import "modules/page_up.scss";
+@import "modules/page_loader.scss";
 
 // Other Components
 @import "modules/welcome.scss";

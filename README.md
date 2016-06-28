@@ -8,7 +8,7 @@ Custom Middleman v.4 starter kit for rapid webdesign. Similar to [middleman-prot
 - Bootstrap (scss)
 - Fontawesome
 - JQuery
-- Middleman - tests and builds static version of websites
+- Middleman - tests and builds static version of website project
 
 ## Installation
 

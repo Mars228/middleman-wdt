@@ -1,0 +1,27 @@
+.btn.outline {
+	background-color: transparent;
+	border-color: $color-contrast;
+	color: $color-contrast;
+	padding: 12px 22px;
+}
+
+.btn-inverse.outline {
+	color: $color-contrast;
+	background: $body-bg;
+	border: 1px solid $color-contrast;
+
+	&, &:active, &.active {
+		&:focus, &.focus {
+			color: shade($body-bg, 20%);
+			background: #FFFFFF;
+			border-color: shade($body-bg, 20%);
+			box-shadow: none;
+    	}
+	}
+	&:focus, &.focus, &:hover {
+		color: shade($body-bg, 20%);
+		background: #FFFFFF;
+		border-color: $color-contrast;
+		box-shadow: none;
+	}
+}

@@ -1,9 +1,49 @@
-// Highlight Color Customization
+/* --------------------------------------------------
+/ Base: > 992 px
+/ ------------------------------------------------ */
 
-//::-moz-selection {
-//    text-shadow: none;
-//    background: $link-color;
-//}
+html {
+    @include rem-baseline;
+}
+
+body {
+    margin: 0px;
+    font-family: $font-txt;
+
+    @include fontsize($font-txt-size, $font-txt-line);
+
+    color: $body-color;
+    font-weight: $font-txt-weight;
+    background-color: #FFF;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale;
+    webkit-tap-highlight-color: $link-color;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-title;
+    font-weight: $font-title-weight;
+    margin: 10px 0px;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+h1.bold, h2.bold, h3.bold, h4.bold, h5.bold, h6.bold {
+    font-weight: $font-title-weight-bold;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+h1 { @include fontsize(36px, 36px); }
+h2 { @include fontsize(30px, 30px); }
+h3 { @include fontsize(26px, 26px); }
+h4 { @include fontsize(18px, 28px); }
+h5 { @include fontsize(16px, 24px); }
+h6 { @include fontsize(14px, 20px); }
+
 
 ::selection, ::-moz-selection {
     text-shadow: none;
@@ -12,20 +52,6 @@
 
 img::selection, img::-moz-selection {
     background: transparent;
-}
-
-body {
-    margin: 0px;
-    font-family: $font-txt;
-    font-size: $font-txt-size;
-    line-height: $font-txt-line;
-    color: $body-color;
-    font-weight: $font-txt-weight;
-    background-color: #FFF;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    webkit-tap-highlight-color: $link-color;
 }
 
 a, a:hover, a:focus, a:active, a:visited {
@@ -38,4 +64,48 @@ a, a:hover, a:focus, a:active, a:visited {
 
 .section {
     padding: 10em 0;
+}
+
+
+/* --------------------------------------------------
+/ Base: 481 - 992 px
+/ ------------------------------------------------ */
+@media only screen and (max-width: $screen-md-max) {
+
+body {
+    font-size: $font-txt-size - 2;
+    line-height: $font-txt-line - 3;
+    text-rendering: optimizeSpeed;
+}
+
+h1 { @include fontsize(32px, 34px); }
+h2 { @include fontsize(28px, 30px); }
+h3 { @include fontsize(24px, 26px); }
+h4 { @include fontsize(16px, 18px); }
+h5 { @include fontsize(14px, 16px); }
+h6 { @include fontsize(12px, 14px); }
+
+
+}
+
+
+/* --------------------------------------------------
+/ Base: 0 - 480 px
+/ ------------------------------------------------ */
+@media only screen and (max-width: $screen-xs-max) {
+
+body {
+    font-size: $font-txt-size - 3;
+    line-height: $font-txt-line - 6;
+    text-rendering: optimizeSpeed;
+}
+
+h1 { @include fontsize(30px, 34px); }
+h2 { @include fontsize(26px, 30px); }
+h3 { @include fontsize(22px, 26px); }
+h4 { @include fontsize(16px, 18px); }
+h5 { @include fontsize(14px, 16px); }
+h6 { @include fontsize(12px, 14px); }
+
+
 }

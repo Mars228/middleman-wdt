@@ -13,13 +13,22 @@ $gray-g9: lighten(#000000, 33.5%); //555555
 $gray-g10: lighten(#000000, 20%); //333333
 $gray-g11: lighten(#000000, 13.5%); //222222
 
+$negative_bg: #272822;
+$color-contrast: #FFFFFF;
+
+//libsass (v3.2.5) defaults
+$rem-baseline: 14px !default;
+$rem-fallback: true !default;
+$rem-px-only: false !default;
+
 $font-txt: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-txt-weight: 400;
 $font-txt-size: 16px;
 $font-txt-line: 23px;
 
 $font-title: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-title-weight: 700;
+$font-title-weight: 400;
+$font-title-weight-bold: 700;
 
 // Settings for the `<body>` element.
 $body-color: #4c515f;
@@ -32,12 +41,12 @@ $link-decoration:            none !default;
 $link-hover-color:           darken($link-color, 15%) !default;
 $link-hover-decoration:      underline !default;
 
-$negative_bg: #272822;
-$color-contrast: #FFFFFF;
+// Grid containers
+$screen-xs-min: 480px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
 
-
-// Grid breakpoints
-$screen-sm-max: 576px;
-$screen-md-max: 720px;
-$screen-lg-max: 940px;
-$screen-xl-max: 1140px;
+$screen-xs-max: 767px;
+$screen-sm-max: 991px;
+$screen-md-max: 1199px;

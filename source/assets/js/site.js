@@ -1,58 +1,79 @@
 // site: middleman-wdt.lh
-var $ = jQuery.noConflict();
 
-// Page Loader
-$(window).load(function(){
-    $('#loader').fadeOut();
+//var $ = jQuery.noConflict();
+$(document).ready(function($) {
+	'use strict';
+
+	/* When 'ready' happened? */
+	//alert("document ready occurred!");
+
+	/* ---------------------------------------------------------------------- */
+	/*  Fixed header when scrolled
+	/* ---------------------------------------------------------------------- */
+	$(window).bind('scroll', function() {
+		if ($(window).scrollTop() > 50) {
+			$('.header').addClass('sticky');
+		}
+		else {
+			$('.header').removeClass('sticky');
+		}
+	});
+
+
+	/* ---------------------------------------------------------------------- */
+	/* Search box toggle at Header
+	/* ---------------------------------------------------------------------- */
+	$('.search-box-trigger').click(function(e) {
+		e.preventDefault();
+
+		$(this).find('i').toggleClass('fa-times');
+		$('.search-box').toggleClass("active");
+	});
+
+
+	/* ---------------------------------------------------------------------- */
+	/*  Smooth page scroll to selected part
+	/* ---------------------------------------------------------------------- */
+	$('.scrollto').on('click', function(e){
+		//store hash
+		var target = this.hash;
+		e.preventDefault();
+		
+		$('body').scrollTo(target, 800, {offset: -70, 'axis':'y', easing:'easeOutQuad'});
+		//Collapse mobile menu after clicking
+		if ($('.navbar-collapse').hasClass('in')){
+			$('.navbar-collapse').removeClass('in').addClass('collapse');
+		}
+	});
+
 });
 
-$(document).ready(function($) {
-    "use strict";
 
-    /* ---------------------------------------------------------------------- */
-    /*  Fixed header when scrolled
-    /* ---------------------------------------------------------------------- */
-    $(window).bind('scroll', function() {
-         if ($(window).scrollTop() > 50) {
-             $('#header').addClass('navbar-fixed-top');
-         }
-         else {
-             $('#header').removeClass('navbar-fixed-top');
-         }
-    });
+// Page Loader
+// $(window).on("load resize scroll", function() {
+$(window).load(function(){
 
-    /* ---------------------------------------------------------------------- */
-    /*  Scroll to top
-    /* ---------------------------------------------------------------------- */
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 500) {
-            $('.scrollup').fadeIn(400);
-        } else {
-            $('.scrollup').fadeOut(400);
-        }
-    });
-    $('.scrollup').click(function(event){
-        event.preventDefault();
-        $('html, body').animate({scrollTop : 0},400);
-        return false;
-    });
+	/* When 'load' happend? */
+	//alert("window load occurred!");
+	
+	$('#page-loader').fadeOut();
+	
 
-
-    /* ======= ScrollTo ======= */
-    $('.scrollto').on('click', function(e){
-        
-        //store hash
-        var target = this.hash;
-                
-        e.preventDefault();
-        
-        $('body').scrollTo(target, 800, {offset: -70, 'axis':'y', easing:'easeOutQuad'});
-        //Collapse mobile menu after clicking
-        if ($('.navbar-collapse').hasClass('in')){
-            $('.navbar-collapse').removeClass('in').addClass('collapse');
-        }
-        
-    });
-
+	/* ---------------------------------------------------------------------- */
+	/*  Scroll to top
+	/* ---------------------------------------------------------------------- */
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 500) {
+			 $('.scroll-to-top').fadeIn(400);
+		} else {
+			$('.scroll-to-top').fadeOut(400);
+		}
+	});
+	
+	$('.scroll-to-top').click(function(e){
+		e.preventDefault();
+		$('html, body').animate({scrollTop : 0},400);
+		return false;
+	});
 
 });
